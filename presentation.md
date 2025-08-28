@@ -19,7 +19,7 @@
 
   to convert from binary to decimal you multipy each digit by 2 raised to the colom that it is in starting with 0 from the right and add them all.
 
-  $1101 \rightarrow 1\cdot2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 13$
+  $1101 \rightarrow 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 13$
   
 
 
