@@ -13,6 +13,13 @@
 
   ## Binary system
 
+  The Altair like other computers uses binary calculations.
+
+  Each number is a byte or 8 bits.
+
+  to convert from binary to decimal you multipy each digit by 2 raised to the colom that it is in starting with 0 from the right and add them all.
+
+  $1101 \rightarrow 1*2^3+1*2^2+0*2+1*2^0 = 13$
   
 
 
