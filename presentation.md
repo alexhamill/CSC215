@@ -1,8 +1,8 @@
 ## Number Systems
 
-  Humans started counting with base 10 most likely becuase we had 10 fingers, However becusae bits only have 2 states computers use base 2 numbers.
+  Humans started counting with base 10 most likely because we had 10 fingers, However because bits only have 2 states computers use base 2 numbers.
 
-  Octal and Hex are also more compatible with compters because they can convert one digit directly to a cirten number of bits.
+  Octal and Hex are also more compatible with computers because they can convert one digit directly to a certain number of bits.
 
   Octal: one digit can go as high as 7 and in binary 7 is the limit of 3 digits or 3 bits $111 \rightarrow 7$
 
@@ -13,14 +13,16 @@
 
   ## Binary system
 
-  The Altair like other computers uses binary calculations.
+  Altair, like other computers, uses binary calculations.
 
   Each number is a byte or 8 bits.
 
-  to convert from binary to decimal you multipy each digit by 2 raised to the colom that it is in starting with 0 from the right and add them all.
+  to convert from binary to decimal you multiply each digit by 2 raised to the column that it is in starting with 0 from the right and add them all.
 
   $1101 \rightarrow 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 13$
   
 
 
   
+
+
