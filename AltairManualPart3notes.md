@@ -52,3 +52,7 @@
 ## D
 - The Altair 8800 uses various memory addressing methods, including **direct addressing**, **register pair addressing**, **Stack Pointer addressing**, **immediate addressing**, and **stack addressing of subroutines**. Each method involves specific instructions and memory management techniques, which are crucial for effective programming.
 ## E
+- some methods to help speed up altaire usage
+    - always proof read you programs by resseting the the first memory location of the program and reading though and checking to make sure everything is correct and fixing it if it isnt
+    - if you need more steps later and you already added some NOP(No OPeration) it is much easier to just add the steps instead of a NOP
+    - when debuging you can use a single step switch to go though the code step by step and examin the memory
