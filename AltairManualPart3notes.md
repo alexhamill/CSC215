@@ -36,10 +36,10 @@
 - Adding program: LDA, MOV, STA, LDA, ADD, STA, JMP
 
 - here is all the bit paterns for each of the commands
-- !(bit map)[bitpatern.png]
+!(bit map)[bitpatern.png]
 
 - he is the steps for entering it
-- !(steps)[calcsteps.png]
+ !(steps)[calcsteps.png]
 
 ## C
 - Machine language requires the programmer to keep track of memory
