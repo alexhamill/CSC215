@@ -33,7 +33,7 @@
 - ADD: add Acumulator to register then saves in Acumulator
 - STA: stores Acumulator to memory adress
 - JMP: go to start of program
-- Adding program: LDA \rightarrow MOV \rightarrow STA \rightarrow LDA \rightarrow ADD \rightarrow STA \rightarrow JMP
+- Adding program: LDA $ \rightarrow $ MOV \rightarrow STA \rightarrow LDA \rightarrow ADD \rightarrow STA \rightarrow JMP
 
 ## C
 - Machine language requires the programmer to keep track of memory
