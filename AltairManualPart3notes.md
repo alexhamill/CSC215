@@ -36,7 +36,7 @@
 - Adding program: LDA, MOV, STA, LDA, ADD, STA, JMP
 
 - here is all the bit paterns for each of the commands
-- !(bit map)[]
+- !(bit map)[bitpatern.png]
 
 - he is the steps for entering it
 - !(steps)[calcsteps.png]
