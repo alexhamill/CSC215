@@ -42,7 +42,7 @@
 - he is the steps for entering it
 
   
- ![steps](calcsteps.png)
+ ![steps](image.png)
 
 ## C
 - Machine language requires the programmer to keep track of memory
