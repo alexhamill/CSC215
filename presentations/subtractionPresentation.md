@@ -46,4 +46,4 @@ Move M: sets the value at HL to the accumulator
 
 The commands take 2 bytes as an input, low then high bytes, because an address needs to be 2 bytes of data because they are too long to just fit in 1 byte. It starts with a low byte then the high byte so it would be writing 3456 as 56 34.
 
-Also I made a [.bin file](../binfiles/subtract-V1.bin) so you can easly inport it using a [hex editor](https://hexed.it/)
+Also I made a [.bin file](https://github.com/alexhamill/CSC215/blob/main/binfiles/subtract-V1.bin?raw=true) so you can easly inport it using a [hex editor](https://hexed.it/)
