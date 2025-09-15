@@ -44,7 +44,7 @@
 28|HB|00|
 29|NOP|00| padding
 2a|HALT|76| stops program
-7b 32 32 00 7a 32 33 00 00 76
+
 
 ## commands
 
