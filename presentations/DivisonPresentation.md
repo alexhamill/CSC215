@@ -1,26 +1,36 @@
 # Divison
 
 ## program
+| address | command | Hex |comment|
+-----|--------|-------|---
+1|LDA|3a| loads the dividen into the acumultor
+2|LB|30|
+3|HB|00|
+4|MOV|47| move dividen into B register
+5|LDA|3a| loads the divisor into acumulator
+6|LB|31|
+7|HB|00|
+8|MOV|4f| moves acumulator into C register
 
-| address | command | Hex |
------|--------|-------
-10|MVI|50
-11|LB|1e
-12|HB|00
-13|MOV|7a
-14|CMP|b9
-15|JC|da
-16|LB|1e
-17|HB|00
-18|SUB|91
-19|MOV|57
-1a|INR|1c
-1b|JMP|c3
-1c|LB|13
-1d|HB|00
-1e|JMP|c3
-1f|LB|21
-20|HB|00
+| address | command | Hex | comment|
+-----|--------|-------|----
+10|MVI|50| removes garbage in register E
+11|LB|1e| 
+12|HB|00|
+13|MOV|7a| moves acumulator to D
+14|CMP|b9| compairs dividen with divisor and turns on cary flag if divisor bigger
+15|JC|da| jumps out of loop if cary flag on
+16|LB|1e|
+17|HB|00|
+18|SUB|91| subtracts A from C
+19|MOV|57| moves A to D
+1a|INR|1c| incriments register E for each subtraction from the 
+1b|JMP|c3|
+1c|LB|13|
+1d|HB|00|
+1e|JMP|c3|
+1f|LB|21|
+20|HB|00|
 
 ## commands
 
