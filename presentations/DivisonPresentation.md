@@ -24,13 +24,27 @@
 17|HB|00|
 18|SUB|91| subtracts A from C
 19|MOV|57| moves A to D
-1a|INR|1c| incriments register E for each subtraction from the 
-1b|JMP|c3|
+1a|INR|1c| incriments register E for each subtraction from quotient
+1b|JMP|c3| jumps back to adress 13 to restart the loop
 1c|LB|13|
 1d|HB|00|
-1e|JMP|c3|
+1e|JMP|c3|  jumps to the re storing of the numbers
 1f|LB|21|
 20|HB|00|
+
+| address | command | Hex |comment|
+-----|--------|-------|---
+21|MOV|7b| moves E(quotient) to A
+22|STA|32|  stores the quotient in 32
+23|LB|32| 
+24|HB|00|
+25|MOV|7a| moves D(remainder) to A
+26|STA|32| stores the remainder in 33 
+27|LB|33|
+28|HB|00|
+29|NOP|00| padding
+2a|HALT|76| stops program
+7b 32 32 00 7a 32 33 00 00 76
 
 ## commands
 
