@@ -61,3 +61,5 @@ L|5
 M(HL)|6
 A|7
 
+
+[bin file](https://github.com/alexhamill/CSC215/blob/main/binfiles/division.bin)
