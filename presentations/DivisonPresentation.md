@@ -42,7 +42,7 @@ The code moves the dividend to a register then subtracts the divisor from the di
 
 The commands with registers have them built in sometimes they have the base + the register * 2^shift as the code
 
-so for INR register E it would be $ 4 + 3*2^3 $  so 1C
+so for INR register E it would be $ 4 + 3  \cdot  2^3 $  so 1C
 
 |Comand|Base|Shift
 ---|----|--
