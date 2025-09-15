@@ -22,13 +22,13 @@
 1f|LB|21
 20|HB|00
 
-## comands
+## commands
 
-MVI - Move immidate just puts the number directly into the register. This is just to remove the garbage so its not embeding the numbers into the code.
+MVI - Move immediate just puts the number directly into the register. This is just to remove the garbage so its not embedding the numbers into the code.
 
-CMP - Compares the values and sets the carry flag if A is less than the register you are comparing it to. This actualy works by just subtracting and turning on the cary flag.
+CMP - Compares the values and sets the carry flag if A is less than the register you are comparing it to. This actually works by just subtracting and turning on the carry flag.
 
-JC - This command is like the jump comand but only jumps if the cary flag is turned on. in this case it will only jump if the divdend is less than the divisor.
+JC - This command is like the jump command but only jumps if the cary flag is turned on. in this case it will only jump if the dividend is less than the divisor.
 
 INR - adds one to a register.
 
@@ -36,11 +36,11 @@ JMP - just always jumps.
 
 ## The process
 
-The code moves the the dividen to a register then subtracts the divisor from the dividen incrimenting the quotient and checking to make sure the dididen is still larger than the divisor. Once it isnt what was the dividen is now the remainder and the number that was being incrimented is the quotient. then it stores them back into the ram.
+The code moves the dividend to a register then subtracts the divisor from the dividend incrementing the quotient and checking to make sure the dividend is still larger than the divisor. Once it isn't what was the dividend is now the remainder and the number that was being incremented is the quotient. then it stores them back into the ram.
 
 ## base of commands
 
-The comands with registers have them build in somtimes they have the base + the register * 2^shift
+The commands with registers have them built in sometimes they have the base + the register * 2^shift as the code
 
 so for INR register E it would be $ 4 + 3*2^3 $  so 1C
 
