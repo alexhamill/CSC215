@@ -1,5 +1,7 @@
 # Divison
 
+## program
+
 | address | command | Hex |
 -----|--------|-------
 10|MVI|50
@@ -40,7 +42,7 @@ The code moves the the dividen to a register then subtracts the divisor from the
 
 The comands with registers have them build in somtimes they have the base + the register * 2^shift
 
-so for INR register E it would be 4 + 3 so 07
+so for INR register E it would be $ 4 + 3*2^3 $  so 1C
 
 |Comand|Base|Shift
 ---|----|--
