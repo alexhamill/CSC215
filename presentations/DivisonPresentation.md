@@ -87,3 +87,4 @@ A|7
 
 
 [bin file](https://github.com/alexhamill/CSC215/blob/main/binfiles/division.bin)
+[spc file](https://github.com/alexhamill/CSC215/blob/main/binfiles/division.spc)
