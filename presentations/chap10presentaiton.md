@@ -1,7 +1,7 @@
 # Chapter 10
 
 - There needs to be User environment is separate from the operating system
-- using subrouteins helps keep the users registers clean
+- using subrouteins help keep the users registers clean
 - This separation improves program reliability and portability.
 
 ## Making User Stack
