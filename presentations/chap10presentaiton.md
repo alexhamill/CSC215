@@ -12,6 +12,7 @@
 - “DB” means Define Byte which you use to set the first byte.
 
 DS 64 ;
+
 STAK: DB 0 ;
 
 Then we have to set the pointer to the top of the stack using 
