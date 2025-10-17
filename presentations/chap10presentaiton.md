@@ -6,7 +6,7 @@
 
 ## Making User Stack
 
-- The stack stores temporary data and return addresses — it grows downward in memory.
+- The stack stores temporary data and return addresses it grows downward in memory.
 - You need to choose the top of the stack and how big it is.
 - “DS” means define storage which you use to set stack size.
 - “DB” means Define Byte which you use to set the first byte.
