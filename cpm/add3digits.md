@@ -1,16 +1,18 @@
-
 ; ASCII CHARACTERS
 CR      EQU     0DH             
 LF      EQU     0AH             
 CTRLZ   EQU     1AH            
+
 ; CP/M BDOS FUNCTIONS
 RCONF   EQU     1               
 WCONF   EQU     2              
 RBUFF   EQU     10              
+
 ; CP/M ADDRESSES
 RBOOT   EQU     0               
 BDOS    EQU     5               
 TPA     EQU     100H            
+
         ORG     TPA             
 START:  LXI     SP,STAK         
 
@@ -101,7 +103,7 @@ GNUM1X: INX     H               ; NEXT CHARACTER
 GNUM2:  XCHG                    ; RESULT TO HL
         RET
 
-; PRINT  FROM HL 
+; PRINT FROM HL 
 PRTNUM: LXI     D,NUMBUF+5      ; POINT TO END OF BUFFER
         MVI     B,0             ; DIGIT COUNTER
         
@@ -245,5 +247,3 @@ INBUF:  DS      83              ; LINE INPUT BUFFER
 STAK:   DB      0               ; TOP OF STACK
 
         END
-
-
