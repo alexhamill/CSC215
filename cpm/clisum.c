@@ -1,3 +1,6 @@
+/*
+Made by: Alex Hamill
+*/
 #include <stdio.h>
 
 

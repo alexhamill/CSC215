@@ -1,3 +1,6 @@
+/*
+Made by: Alex Hamill and Eleanor Mahshie
+*/
 #include <stdio.h>
 
 main(argc, argv)
