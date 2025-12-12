@@ -76,10 +76,8 @@ char **argv;
 
     }
 
-    fprintf(outfp, "%d ", linesum);
-    fputc(' ', outfp);
-    printf("%d", linesum);
-    putchar(' ');
+    line[linesum] = '\0';
+    reverse(line);
     
     for(i = 0; i < linesum; i++){
         fputc(line[i], outfp);
