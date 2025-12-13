@@ -17,59 +17,106 @@ char *s, *t;
         i++;
         j++;
     }
-
 }
 
 atoi(s) 
-char *s ;
+char *s;
 {
-    while( *s >= '0' && *s <= '9' ){ 
-        return (*s - '0') + 10 * atoi(s + 1); 
+    int n, sign;
+    n = 0;
+    sign = 1;
+    
+    while (*s == ' ' || *s == '\t' || *s == '\n')
+        s++;
+    
+    if (*s == '-') {
+        sign = -1;
+        s++;
     }
+    if (*s == '+') {
+        s++;
+    }
+    
+    while (*s >= '0' && *s <= '9') {
+        n = n * 10 + (*s - '0');
+        s++;
+    }
+    
+    return sign * n;
 }
 
 
-/* itoa: convert n to characters in s */
 itoa(n, s)
 int n;
 char *s;
 {
     int sign;
-    char *p = s;
+    char *p;
+    char *start;
+    char *end;
+    char c;
+    
+    p = s;
     sign = n;
     if (n < 0) {
         n = -n;
     }
-    while (1) {
+    *p++ = n % 10 + '0';
+    n /= 10;
+    while (n > 0) {
         *p++ = n % 10 + '0';
         n /= 10;
-        if (n == 0) {
-            break;
-        }
     }
+    
     if (sign < 0) {
         *p++ = '-';
     }
     *p = '\0';
-    {
-        char *start = s;
-        char *end = p - 1;
-        char c;
-        while (start < end) {
-            c = *start;
-            *start++ = *end;
-            *end-- = c;
-        }
+    
+    start = s;
+    end = p - 1;
+    while (start < end) {
+        c = *start;
+        *start++ = *end;
+        *end-- = c;
+    }
+}
+
+reverse(c)
+char *c;
+{ 
+    int i, o;
+    char backwards[1000];
+    
+    i = 0;
+    o = 0;
+    
+    while (c[i] != '\0'){
+        i++;
+    }
+
+    i--;
+    while (i >= 0){
+        backwards[o] = c[i];
+        i--;
+        o++;
+    }
+    backwards[o] = '\0';
+    for(i = 0; i <= o; i++){
+        c[i] = backwards[i];
     }
 }
 
 
-
-
-int main()
+main()
 {
    char str1[10];
    char str2[3];
+   char numstr[4];
+   int num;
+   char strnum[10];
+   char revstr[6];
+   
    str1[0]='a';
    str1[1]='b';
    str1[2]='\0';
@@ -78,21 +125,22 @@ int main()
    strcat(str1,str2);
    printf("cat test should be abc:  %s",str1);
 
+   numstr[0]='1';
+   numstr[1]='2';
+   numstr[2]='3';
+   numstr[3]='\0';
+   num = atoi(numstr);
+   printf("\natoi test should be 123: %d\n", num);
 
-    char numstr[4];
-    numstr[0]='1';
-    numstr[1]='2';
-    numstr[2]='3';
-    numstr[3]='\0';
-    int num;
-    num = atoi(numstr);
-    printf("\natoi test should be 123: %d\n", num);
+   itoa(-456, strnum);
+   printf("itoa test should be -456: %s\n", strnum);
 
-    char strnum[10];
-    itoa(-456, strnum);
-    printf("itoa test should be -456: %s\n", strnum);
-
-
-
-
+   revstr[0]='h';
+   revstr[1]='e';
+   revstr[2]='l';
+   revstr[3]='l';
+   revstr[4]='o';
+   revstr[5]='\0';
+   reverse(revstr);
+   printf("reverse test should be olleh: %s\n", revstr);
 }
