@@ -31,7 +31,7 @@ char *c;
 }
 
 main(argc, argv)
-int argc;
+int argc; 
 char **argv;
 {
     FILE *infp, *outfp;
