@@ -33,7 +33,7 @@ char *s;
         sign = -1;
         s++;
     }
-    if (*s == '+') {
+    else if (*s == '+') {
         s++;
     }
     
@@ -53,7 +53,7 @@ char *s;
     int sign;
     char *p;
     char *start;
-    char *end;
+    char *o;
     char c;
     
     p = s;
@@ -61,12 +61,11 @@ char *s;
     if (n < 0) {
         n = -n;
     }
-    *p++ = n % 10 + '0';
-    n /= 10;
-    while (n > 0) {
+    
+    do {
         *p++ = n % 10 + '0';
         n /= 10;
-    }
+    } while (n > 0);
     
     if (sign < 0) {
         *p++ = '-';
@@ -74,11 +73,11 @@ char *s;
     *p = '\0';
     
     start = s;
-    end = p - 1;
-    while (start < end) {
+    o = p - 1;
+    while (start < o) {
         c = *start;
-        *start++ = *end;
-        *end-- = c;
+        *start++ = *o;
+        *o-- = c;
     }
 }
 
@@ -123,7 +122,7 @@ main()
    str2[0]='c';
    str2[1]='\0';
    strcat(str1,str2);
-   printf("cat test should be abc:  %s",str1);
+   printf("cat test should be abc:  %s\n",str1);
 
    numstr[0]='1';
    numstr[1]='2';
