@@ -16,7 +16,7 @@ int main()
         scanf("%d", &input);
         switch (op)
         {
-            case 'plus':
+            case '+':
                 accumulator += input;
                 break;
             case '-':
