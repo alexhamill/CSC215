@@ -57,7 +57,9 @@ struct bigint *res;
     int digit_a;
     int digit_b;
     int sum;
+    int digit;
     
+    digit = 0;
     MAX = len(a,b);
     result = alloc(MAX + 2);
     carry = 0;
@@ -76,6 +78,7 @@ struct bigint *res;
             carry = 0;
             result[i] = sum + '0';
         }
+        digit++;
     }
     
     if (carry) {
@@ -90,6 +93,70 @@ struct bigint *res;
     p = 0;
     int o;
     o = MAX - 1;
+    char temp;
+    while (p < o) {
+        temp = result[p];
+        result[p] = result[o];
+        result[o] = temp;
+        p++;
+        o--;
+    }
+    
+    set_bigint(result, res);
+}
+
+void sub(a, b, res) 
+struct bigint *a;
+struct bigint *b;
+struct bigint *res;
+{
+    int MAX;
+    char *result;
+    int borrow;
+    int i;
+    int digit_a;
+    int digit_b;
+    int diff;
+    int digit;
+    
+    if (a->negative != b->negative) {
+        add(a, b, res);
+        return;
+    }
+    
+    digit = 0;
+    MAX = len(a,b);
+    result = alloc(MAX + 1);
+    borrow = 0;
+    
+    for (i = 0; i < MAX; i++)
+    {
+        digit_a = (i < a->numdigits) ? (a->digits[i] - '0') : 0;
+        digit_b = (i < b->numdigits) ? (b->digits[i] - '0') : 0;
+        
+        diff = digit_a - digit_b - borrow;
+        
+        if (diff < 0) {
+            borrow = 1;
+            result[i] = (diff + 10) + '0';
+        }
+        else {
+            borrow = 0;
+            result[i] = diff + '0';
+        }
+        digit++;
+    }
+    
+    while (digit > 1 && result[digit-1] == '0') {
+        digit--;
+    }
+    
+    result[digit] = '\0';
+    
+    int p;
+    p = 0;
+    int o;
+    o = digit - 1;
     char temp;
     while (p < o) {
         temp = result[p];
