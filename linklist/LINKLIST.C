@@ -16,7 +16,7 @@ char* list_str;
 {
     struct node* p;
     char* ptr;
-    char numbuf[10];
+    char numbuf[100];
     int i, num, neg;
     
     ptr = list_str;
@@ -27,7 +27,6 @@ char* list_str;
         num = p->num;  
         neg = num < 0;
         if (neg) num = -num; 
-        
         i = 0;
         do {
             numbuf[i++] = '0' + (num % 10);
