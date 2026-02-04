@@ -47,3 +47,5 @@ char* list_str;
     *ptr = '\0';
     return list_str;
 }
+
+

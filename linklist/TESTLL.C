@@ -27,5 +27,22 @@ main() {
         ASSERT_STR(prnlist(head, list_str), "[1 -> 2 -> 3]");
     }
 
+        TEST_CASE("Test print list2") {
+        struct node* a;
+        struct node* b;
+        struct node* c;
+        char d[100];
+    
+        a = mknode(10);
+        b = mknode(22);
+        c = mknode(30);
+    
+        a->next = b;
+        b->next = c;
+        ASSERT_STR(prnlist(a, d), "[10 -> 22 -> 30]");
+        
+    }
+
+
   END_TESTING();
 }
