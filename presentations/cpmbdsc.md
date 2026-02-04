@@ -58,7 +58,7 @@ char *p;
         return;
 }
 ```
-## Exercise 8-8.
+<!-- ## Exercise 8-8.
 
 Write a routine bfree(p, n) which will free an arbitrary block p of n characters into the free list maintained by alloc and free. By using bfree, a user can add a static or external array to the free list at any time.
 
@@ -82,4 +82,4 @@ unsigned n;
     
     free((char *)(bp + 1));
 }
-```
+``` -->
